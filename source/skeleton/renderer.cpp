@@ -47,7 +47,8 @@ void Renderer::flip(bool draw, bool inputs) {
 
     // call base class (draw childs)
     if (draw) {
-        Transform trans = getTransform();
+        // Transform is already applied to this rectangle and it's children.
+        Transform trans; //getTransform();
         onDraw(trans);
     }
 
